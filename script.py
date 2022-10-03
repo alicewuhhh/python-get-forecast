@@ -21,7 +21,8 @@ def get_forecast( city='Pittsburgh' ):
     Hint:
     * Return the period that is labeled as "Tonight"
     '''
-
+    period = 
+    return period
     raise NotImplementedError()
 
 def main():
