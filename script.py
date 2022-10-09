@@ -2,6 +2,7 @@ from pathlib import Path
 from geopy.geocoders import Nominatim
 import requests
 import pandas as pd
+import json
 
 def get_forecast( city='Pittsburgh' ):
     '''
@@ -21,7 +22,16 @@ def get_forecast( city='Pittsburgh' ):
     Hint:
     * Return the period that is labeled as "Tonight"
     '''
-    period = 
+    temp = []
+
+    
+    output_dic=json.loads(city)
+    if output_dic.get('latitude') or output_dic.get('longitude')is None:
+        warnings.warn("CityNotFoundError")    
+    if output_dic.get('latitude')
+    
+    
+    period = 'Tonight'
     return period
     raise NotImplementedError()
 
@@ -41,8 +51,8 @@ def main():
 
     #sort repositories
     file = open("README.md", "w")
-    file.write('![Status](https://github.com/icaoberg/python-get-forecast/actions/workflows/build.yml/badge.svg)\n')
-    file.write('![Status](https://github.com/icaoberg/python-get-forecast/actions/workflows/pretty.yml/badge.svg)\n')
+    file.write('![Status](https://github.com/alicewuhhh/python-get-forecast/actions/workflows/build.yml/badge.svg)\n')
+    file.write('![Status](https://github.com/alicewuhhh/python-get-forecast/actions/workflows/pretty.yml/badge.svg)\n')
     file.write('# Pittsburgh Nightly Forecast\n\n')
     
     file.write(df.to_markdown(tablefmt='github'))
